@@ -35,11 +35,18 @@
 
 // 频率相关参数
 // 具体需要的频率可以自己计算
-#define TIM_PRESCALER                256
+#define TIM_PRESCALER                   256
 // 定义定时器周期，输出比较模式周期设置为0xFFFF
-#define TIM_PERIOD                   0xFFFF
+#define TIM_PERIOD                      0xFFFF
 
-#define member_count                 10000 //电机移动距离
+// 电机单圈参数
+#define STEP_ANGLE				        1.8f //步进电机的步距角 单位：度
+#define FSPR              		        (360.0f / 1.8f) //步进电机的一圈所需脉冲数
+			
+#define MICRO_STEP        		        16 //细分器细分数 
+#define SPR               		        (FSPR * MICRO_STEP) //细分后一圈所需脉冲数
+
+#define member_count                    10 //电机转动圈数
 
 /************************************************************/
 #define HIGH GPIO_PIN_SET	    //高电平

@@ -120,7 +120,7 @@ void HAL_TIM_OC_DelayElapsedCallback(TIM_HandleTypeDef *htim)
         __HAL_TIM_SET_COMPARE(&TIM_StepperHandle, MOTOR_PUL_CHANNEL, count + oc_pulse_num);
         step++;
     }
-    if (step == member_count)
+    if (step == member_count * SPR)
     {
         stepper_Stop(MOTOR_PUL_CHANNEL);
         step = 0;
