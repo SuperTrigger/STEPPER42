@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"stepper42\startup_stm32f103xe.o"
+"stepper42\stepper.o"
+"stepper42\main.o"
+"stepper42\gpio.o"
+"stepper42\tim.o"
+"stepper42\stm32f1xx_it.o"
+"stepper42\stm32f1xx_hal_msp.o"
+"stepper42\stm32f1xx_hal_gpio_ex.o"
+"stepper42\stm32f1xx_hal_tim.o"
+"stepper42\stm32f1xx_hal_tim_ex.o"
+"stepper42\stm32f1xx_hal.o"
+"stepper42\stm32f1xx_hal_rcc.o"
+"stepper42\stm32f1xx_hal_rcc_ex.o"
+"stepper42\stm32f1xx_hal_gpio.o"
+"stepper42\stm32f1xx_hal_dma.o"
+"stepper42\stm32f1xx_hal_cortex.o"
+"stepper42\stm32f1xx_hal_pwr.o"
+"stepper42\stm32f1xx_hal_flash.o"
+"stepper42\stm32f1xx_hal_flash_ex.o"
+"stepper42\stm32f1xx_hal_exti.o"
+"stepper42\system_stm32f1xx.o"
+--strict --scatter "STEPPER42\STEPPER42.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "STEPPER42.map" -o STEPPER42\STEPPER42.axf
